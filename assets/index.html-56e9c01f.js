@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-8daa1a0e","path":"/","title":"关于博客","lang":"zh-CN","frontmatter":{"lang":"zh-CN","title":"关于博客","description":null},"headers":[],"git":{"updatedTime":1675609089000,"contributors":[{"name":"王彬彬","email":"wangbinbin@wangbinbindeMacBook-Pro.local","commits":2}]},"filePathRelative":"README.md"}');export{a as data};

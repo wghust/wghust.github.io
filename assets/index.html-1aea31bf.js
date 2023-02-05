@@ -1,0 +1,1 @@
+import{_ as t,p as n,q as o,R as e}from"./framework-204010b2.js";const _={},s=e("p",null,"之前有一个完整的博客，后来工作忙了，没有续费服务器，所有的博客文章没了。",-1),l=e("p",null,"过了两年了，想想博客还是要继续。",-1),c=e("p",null,"所以简单的重新开始吧。",-1),d=e("blockquote",null,[e("p",null,"先空着，慢慢加")],-1),i=[s,l,c,d];function r(a,u){return n(),o("div",null,i)}const h=t(_,[["render",r],["__file","index.html.vue"]]);export{h as default};
