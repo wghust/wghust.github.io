@@ -1,10 +1,49 @@
 ---
 layout: default
-title: 我的blog
+title:
 ---
 
-<ul>
-  {% for post in site.posts %}
-    <li>{{post.date | date_to_string}}<a href="{{site.baseurl}}{{post.url}}">{{post.title}}</li>
-  {% endfor %}
-</ul>
+<section class="home-hero site-shell">
+  <p class="eyebrow">软件 · 产品 · 数字生活</p>
+  <h1>写代码，<br>也写思考。</h1>
+  <p class="hero-intro">{{ site.description }}少一些噪音，多一些值得回看的东西。</p>
+</section>
+
+<section class="articles-section site-shell" aria-labelledby="latest-writing">
+  <div class="section-heading">
+    <h2 id="latest-writing">最新文章</h2>
+    <span>{{ site.posts | size }} 篇记录</span>
+  </div>
+
+  {% assign featured_post = site.posts.first %}
+  {% if featured_post %}
+    <article class="featured-post">
+      <a href="{{ featured_post.url | relative_url }}" aria-label="阅读：{{ featured_post.title }}">
+        <div class="featured-meta">
+          <span>最近更新</span>
+          <time datetime="{{ featured_post.date | date_to_xmlschema }}">{{ featured_post.date | date: "%Y.%m.%d" }}</time>
+        </div>
+        <h3>{{ featured_post.title }}</h3>
+        <p>{{ featured_post.description | default: featured_post.excerpt | strip_html | strip_newlines | truncate: 120 }}</p>
+        <span class="read-more">阅读全文 <span aria-hidden="true">→</span></span>
+      </a>
+    </article>
+  {% endif %}
+
+  {% if site.posts.size > 1 %}
+    <div class="post-list">
+      {% for post in site.posts offset:1 %}
+        <article class="post-list-item">
+          <a href="{{ post.url | relative_url }}">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+            <div>
+              <h3>{{ post.title }}</h3>
+              <p>{{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 90 }}</p>
+            </div>
+            <span class="list-arrow" aria-hidden="true">↗</span>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  {% endif %}
+</section>

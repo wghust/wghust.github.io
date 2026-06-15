@@ -1,1 +1,17 @@
-baseurl: ./
+title: 王彬彬
+description: 记录软件工程、产品设计与数字生活。
+author: 王彬彬
+github_username: wghust
+github_url: https://github.com/wghust
+baseurl: ""
+url: https://wghust.github.io
+lang: zh-CN
+markdown: kramdown
+permalink: /articles/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

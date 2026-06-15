@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<article class="post-page">
+  <header class="post-header site-shell reading-shell">
+    <a class="eyebrow back-link" href="{{ '/' | relative_url }}">← 返回文章列表</a>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y 年 %m 月 %d 日" }}</time>
+      <span aria-hidden="true">·</span>
+      <span>{% assign words = content | strip_html | number_of_words %}{% assign minutes = words | divided_by: 300 | plus: 1 %}约 {{ minutes }} 分钟阅读</span>
+    </div>
+  </header>
+
+  <div class="post-content site-shell reading-shell">
+    {{ content }}
+  </div>
+</article>
