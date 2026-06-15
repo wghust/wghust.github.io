@@ -1,31 +1,12 @@
-import { defineUserConfig, defaultTheme } from 'vuepress'
+import { defineUserConfig } from 'vuepress'
 import { searchPlugin } from '@vuepress/plugin-search'
+import { blogTheme } from './theme'
 
 export default defineUserConfig({
   lang: 'zh-CN',
-  title: '随记小博',
-  description: '十年磨砺',
-  theme: defaultTheme({
-    // 默认主题配置
-    navbar: [
-      {
-        text: '沉淀',
-        link: '/experience',
-      },
-      {
-        text: '探索',
-        link: '/explore'
-      },
-      {
-        text: '感悟',
-        link: '/think'
-      },
-      {
-        text: '旅游',
-        link: '/travel'
-      }
-    ],
-  }),
+  title: '王彬彬',
+  description: '记录软件工程、产品设计与数字生活。',
+  theme: blogTheme(),
   plugins: [
     searchPlugin({
       locales: {
