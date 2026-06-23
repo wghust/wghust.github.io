@@ -1,0 +1,7 @@
+import{_ as e,n as a,p as r,O as i}from"./framework-997e6189.js";const d={},n=i(`<p>博客已经安静了很久。重新打开它时，我发现这里仍保留着几年前重新开始时写下的话：简单、直接，也有很多等待完善的地方。</p><h2 id="为什么重新开始" tabindex="-1"><a class="header-anchor" href="#为什么重新开始" aria-hidden="true">#</a> 为什么重新开始</h2><p>写作能迫使人把模糊的想法整理清楚。比起散落在不同平台上的短内容，我更想拥有一个自己能够长期维护的空间。</p><blockquote><p>少一些追逐即时反馈的内容，多一些值得在未来重新打开的记录。</p></blockquote><h2 id="这里会写什么" tabindex="-1"><a class="header-anchor" href="#这里会写什么" aria-hidden="true">#</a> 这里会写什么</h2><ul><li>软件工程中的实践与判断</li><li>产品设计和用户体验</li><li>对工具、效率与数字生活的观察</li></ul><p>偶尔也会记录一些代码。例如，一个好的主题切换逻辑应该尊重系统设置，同时记住用户的主动选择：</p><div class="language-javascript line-numbers-mode" data-ext="js"><pre class="language-javascript"><code>const savedTheme = localStorage.getItem(&#39;theme&#39;)
+const preferredTheme = matchMedia(&#39;(prefers-color-scheme: dark)&#39;).matches
+  ? &#39;dark&#39;
+  : &#39;light&#39;
+
+document.documentElement.dataset.theme = savedTheme || preferredTheme
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="长期维护" tabindex="-1"><a class="header-anchor" href="#长期维护" aria-hidden="true">#</a> 长期维护</h2><p>这个博客仍然会保持轻量。内容是主角，设计只负责帮助阅读。希望下一次回头时，这里已经积累了一些真正有价值的东西。</p>`,10),s=[n];function t(c,l){return a(),r("div",null,s)}const o=e(d,[["render",t],["__file","restart.html.vue"]]);export{o as default};

@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-22a39d25","path":"/about.html","title":"关于","lang":"zh-CN","frontmatter":{"title":"关于","description":"关于王彬彬和这个博客。"},"headers":[{"level":2,"title":"保持联系","slug":"保持联系","link":"#保持联系","children":[]}]}');export{t as data};
